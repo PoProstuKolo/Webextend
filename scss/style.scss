@@ -1,0 +1,170 @@
+*,
+*::after,
+*::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+// * {
+// 	border: 1px solid red;
+// }
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background: rgb(27, 27, 129);
+	background: linear-gradient(55deg, rgba(27, 27, 129, 1) 0%, rgba(136, 32, 139, 1) 100%);
+	min-height: 100vh;
+}
+
+//* NAVBAR *//
+.navbar {
+	font-size: 2rem;
+	border-bottom: 1px solid white;
+
+	&-brand {
+		font-size: 2rem;
+		color: #4d03e0;
+		text-transform: uppercase;
+		font-weight: bold;
+		text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+
+		&:hover {
+			color: #4d03e0;
+		}
+	}
+
+	.nav-link {
+		color: #fff;
+		font-weight: bold;
+		transition: color 0.3s;
+		padding: 1em 0em;
+
+		&:hover {
+			color: #aaa;
+		}
+
+		&--login {
+			font-weight: normal;
+		}
+	}
+
+	.nav-link.active {
+		color: #fff;
+		font-weight: bold;
+		transition: color 0.3s;
+
+		&:hover {
+			color: #aaa;
+		}
+	}
+}
+
+//* HEADER *//
+.header {
+	margin-top: 10em;
+	position: relative;
+
+	&__text {
+		font-size: 5rem;
+		color: #fff;
+	}
+
+	&__description {
+		font-size: 2rem;
+		color: #fff;
+	}
+
+	&__btns {
+		.btn {
+			color: #fff;
+			padding: 1em 2.5em;
+			border: 2px solid white;
+			border-radius: 25px;
+			font-size: 1.3rem;
+			font-weight: bold;
+
+			&:hover {
+				background-color: #fff;
+				color: #000;
+				font-weight: bold;
+			}
+		}
+	}
+
+	.dragon {
+		position: absolute;
+		z-index: 1;
+		animation: dragon 5s ease-in-out infinite;
+
+		@keyframes dragon {
+			0%,
+			100% {
+				transform: translateY(-7.5%);
+			}
+
+			50% {
+				transform: translateY(7.5%);
+			}
+		}
+	}
+	.ball {
+		background: rgb(27, 27, 129);
+		background: linear-gradient(55deg, rgb(66, 66, 209) 0%, rgb(226, 99, 230) 100%);
+		border-radius: 50%;
+		width: 50px;
+		height: 50px;
+		z-index: -1;
+		position: absolute;
+		left: 50%;
+
+		&:nth-child(2) {
+			top: 50%;
+			left: 50%;
+			width: 25px;
+			height: 25px;
+		}
+
+		&:nth-child(3) {
+			top: 32%;
+			left: 95%;
+			width: 75px;
+			height: 75px;
+		}
+
+		&:nth-child(4) {
+			top: 50%;
+			left: 75%;
+		}
+
+		&:nth-child(5) {
+			top: 0%;
+			left: 80%;
+		}
+
+		&:nth-child(6) {
+			bottom: 0%;
+			left: 50%;
+		}
+
+		&:nth-child(7) {
+			bottom: -55%;
+			left: 68%;
+			width: 20px;
+			height: 20px;
+		}
+		&:nth-child(8) {
+			bottom: -30%;
+			left: 30%;
+			width: 87px;
+			height: 87px;
+		}
+		&:nth-child(9) {
+			bottom: 20%;
+			left: -30%;
+			width: 87px;
+			height: 87px;
+		}
+	}
+}
