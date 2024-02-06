@@ -13,6 +13,28 @@ body {
 	margin: 0;
 }
 
+//* BACK BTN *//
+.show {
+	display: none;
+}
+
+.backBtn {
+	display: none;
+	position: fixed;
+	right: 1%;
+	bottom: 4%;
+	z-index: 10;
+
+	a {
+		color: #fff;
+		font-size: 2rem;
+		padding: 1em;
+		background-color: var(--main);
+		border-radius: 15px;
+		font-weight: bold;
+	}
+}
+
 //* HEADER *//
 
 .header {
@@ -118,7 +140,6 @@ body {
 					color: #fff;
 				}
 			}
-
 		}
 	}
 	&__arrows {
@@ -601,6 +622,12 @@ body {
 			margin: 0em 1em;
 			font-size: 1.5rem;
 		}
+	}
+}
+
+@media (min-width: 992px) {
+	.show {
+		display: block;
 	}
 }
 
