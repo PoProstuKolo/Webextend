@@ -52,9 +52,9 @@
                     <div class="navbar-nav mx-auto">
                         <a class="nav-link active py-2 px-4 my-4 my-lg-0" href="index.html">Główna</a>
                         <a class="nav-link py-2 px-4 my-4 my-lg-0" href="index.html#aboutus">O nas</a>
-                        <a class="nav-link--active py-2 px-4 my-4 my-lg-0" href="./projects.html"
-                            aria-current="page">Projekty</a>
-                        <a class="nav-link py-2 px-4 my-4 my-lg-0" href="./pricelist.html">Cennik</a>
+                        <a class="nav-link py-2 px-4 my-4 my-lg-0" href="./projects.html">Projekty</a>
+                        <a class="nav-link--active py-2 px-4 my-4 my-lg-0" href="./pricelist.html"
+                            aria-current="page">Cennik</a>
                         <a class="nav-link py-2 px-4 my-4 my-lg-0" href="#">Sklep</a>
                         <a class="nav-link py-2 px-4 my-4 my-lg-0" href="index.html#contact">Kontakt</a>
                     </div>
@@ -69,7 +69,7 @@
                 <div class="row">
                     <div class="col-xl-6 d-flex flex-column justify-content-center align-items-center">
                         <h1 data-aos="fade-up" class="header__welcome"><span class="header__brand">Webextend</span> -
-                            strona z naszymi projektami. Spójrz i się przekonaj że warto nam zaufać! </h1>
+                            cennik naszych niezawodnych projektów </h1>
                         <div class="header__btn d-flex flex-column py-3 mt-5">
                             <div data-aos="fade-up" data-aos-delay="200"
                                 class="btn btn-lg btn-outline-primary py-3 pe-5 my-2">
@@ -82,7 +82,7 @@
 
                         </div>
                     </div>
-                    <div class="col-xl-6 d-none d-lg-flex justify-content-center align-items-center">
+                    <div class="col-xl-6 d-none d-md-flex justify-content-center align-items-center">
                         <div class="header__img">
                             <img class="img-fluid" src="./img/Ender_Dragon.webp" alt="">
                         </div>
@@ -95,103 +95,42 @@
         </div>
     </header>
     <main>
-        <section class="projects">
-            <div class="projects__divider"></div>
+        <section class="pricelist" id="pricelist">
+            <div class="pricelist__divider"></div>
             <div class="container">
-                <h2 class="projects__title">Nasze projekty</h2>
-                <div class="row gy-5 gx-lg-5 mt-5 d-flex justify-content-center align-items-center">
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="projects__box d-flex justify-content-center align-items-center flex-column ">
-
-                            <img class="projects__img" src="https://unsplash.it/300"
-                                alt="Zdjęcie przedstawiające projekty wykonany przez WebExtend.pl">
-                            <div class="projects__description d-flex flex-column">
-                                <h2 class="projects__description--title">Przykładowy tytuł</h2>
-                                <p class="projects__description--info">Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing
-                                    elit. Architecto, temporibus?</p>
-                                <a href="#" class="projects__description--btn btn btn-lg btn-outline-primary mb-2">LIVE
-                                </a>
-                            </div>
+                <h2 class="pricelist__title">cennik</h2>
+                <div class="row gy-5 mt-5">
+                    <div class="col-12 col-lg-4">
+                        <div class="pricelist__card">
+                            <div class="pricelist__card--title">Basic</div>
+                            <div class="pricelist__card--price">$299/month</div>
+                            <div class="pricelist__card--hr"></div>
+                            <div class="pricelist__card--description"> Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Vel, ullam?</div>
+                            <a href="#" class="pricelist__card--btn btn btn-lg col-10">Subscribe</a>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="projects__box d-flex justify-content-center align-items-center flex-column ">
-
-                            <img class="projects__img" src="https://unsplash.it/300"
-                                alt="Zdjęcie przedstawiające projekty wykonany przez WebExtend.pl">
-                            <div class="projects__description d-flex flex-column">
-                                <h2 class="projects__description--title">Przykładowy tytuł</h2>
-                                <p class="projects__description--info">Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing
-                                    elit. Architecto, temporibus?</p>
-                                <a href="#" class="projects__description--btn btn btn-lg btn-outline-primary mb-2">LIVE
-                                </a>
-                            </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="pricelist__card">
+                            <div class="pricelist__card--title">Pro</div>
+                            <div class="pricelist__card--price">$399/month</div>
+                            <div class="pricelist__card--hr"></div>
+                            <div class="pricelist__card--description"> Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Vel, ullam?</div>
+                            <a href="#" class="pricelist__card--btn btn btn-lg col-10">Subscribe</a>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="projects__box d-flex justify-content-center align-items-center flex-column ">
-
-                            <img class="projects__img" src="https://unsplash.it/300"
-                                alt="Zdjęcie przedstawiające projekty wykonany przez WebExtend.pl">
-                            <div class="projects__description d-flex flex-column">
-                                <h2 class="projects__description--title">Przykładowy tytuł</h2>
-                                <p class="projects__description--info">Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing
-                                    elit. Architecto, temporibus?</p>
-                                <a href="#" class="projects__description--btn btn btn-lg btn-outline-primary mb-2">LIVE
-                                </a>
-                            </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="pricelist__card">
+                            <div class="pricelist__card--title">Premium</div>
+                            <div class="pricelist__card--price">$499/month</div>
+                            <div class="pricelist__card--hr"></div>
+                            <div class="pricelist__card--description"> Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Vel, ullam?</div>
+                            <a href="#" class="pricelist__card--btn btn btn-lg col-10">Subscribe</a>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="projects__box d-flex justify-content-center align-items-center flex-column ">
-
-                            <img class="projects__img" src="https://unsplash.it/300"
-                                alt="Zdjęcie przedstawiające projekty wykonany przez WebExtend.pl">
-                            <div class="projects__description d-flex flex-column">
-                                <h2 class="projects__description--title">Przykładowy tytuł</h2>
-                                <p class="projects__description--info">Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing
-                                    elit. Architecto, temporibus?</p>
-                                <a href="#" class="projects__description--btn btn btn-lg btn-outline-primary mb-2">LIVE
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="projects__box d-flex justify-content-center align-items-center flex-column ">
-
-                            <img class="projects__img" src="https://unsplash.it/300"
-                                alt="Zdjęcie przedstawiające projekty wykonany przez WebExtend.pl">
-                            <div class="projects__description d-flex flex-column">
-                                <h2 class="projects__description--title">Przykładowy tytuł</h2>
-                                <p class="projects__description--info">Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing
-                                    elit. Architecto, temporibus?</p>
-                                <a href="#" class="projects__description--btn btn btn-lg btn-outline-primary mb-2">LIVE
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="projects__box d-flex justify-content-center align-items-center flex-column ">
-
-                            <img class="projects__img" src="https://unsplash.it/300"
-                                alt="Zdjęcie przedstawiające projekty wykonany przez WebExtend.pl">
-                            <div class="projects__description d-flex flex-column">
-                                <h2 class="projects__description--title">Przykładowy tytuł</h2>
-                                <p class="projects__description--info">Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing
-                                    elit. Architecto, temporibus?</p>
-                                <a href="#" class="projects__description--btn btn btn-lg btn-outline-primary mb-2">LIVE
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-
+                </div>
         </section>
     </main>
     <footer class="footer">
@@ -238,6 +177,7 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script src="./js/main.js" defer></script>
 </body>
 

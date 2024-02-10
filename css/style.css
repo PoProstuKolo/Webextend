@@ -136,6 +136,23 @@ body {
   color: var(--main);
   border: 2px solid var(--main);
 }
+.header .navbar .nav-link--active,
+.header .navbar .nav-link.active--active {
+  color: #fff;
+  font-size: 1.8rem;
+  position: relative;
+}
+.header .navbar .nav-link--active::before,
+.header .navbar .nav-link.active--active::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transform: scaleX(0.9);
+}
 .header__content {
   padding: 6.25em 0;
 }
@@ -209,12 +226,13 @@ body {
 }
 .aboutus__divider {
   background-color: rgb(2, 9, 39);
-  width: 50%;
+  width: 40%;
   height: 55px;
   position: absolute;
   top: 0;
-  right: -5%;
-  transform: skew(45deg);
+  right: 0;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 30% 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 100%, 30% 100%);
 }
 .aboutus__title {
   color: #fff;
@@ -309,12 +327,13 @@ body {
 }
 .whyus__divider {
   background-color: #101010;
-  width: 50%;
+  width: 40%;
   height: 55px;
   position: absolute;
   top: 0;
-  left: -25%;
-  transform: skew(-45deg);
+  left: 0;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
 }
 .whyus__title {
   color: #fff;
@@ -401,12 +420,13 @@ body {
 }
 .contact__divider {
   background-color: rgb(2, 9, 39);
-  width: 50%;
+  width: 40%;
   height: 55px;
   position: absolute;
-  top: 0;
-  right: -25%;
-  transform: skew(45deg);
+  top: -0.5%;
+  right: 0;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 17.5% 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 100%, 17.5% 100%);
 }
 .contact__title {
   color: #fff;
@@ -525,13 +545,7 @@ body {
   border-top: 2px solid #4e4e4e;
 }
 .footer__divider {
-  background-color: rgb(2, 9, 39);
-  width: 50%;
-  height: 55px;
-  position: absolute;
-  top: 0;
-  right: -25%;
-  transform: skew(45deg);
+  padding: 3em 0em;
 }
 .footer__title {
   color: #fff;
@@ -641,12 +655,13 @@ body {
 }
 .projects__divider {
   background-color: rgb(2, 9, 39);
-  width: 50%;
+  width: 40%;
   height: 55px;
   position: absolute;
   top: 0;
-  right: -25%;
-  transform: skew(45deg);
+  right: 0;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 30% 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 100%, 30% 100%);
 }
 .projects__title {
   color: #fff;
@@ -666,19 +681,23 @@ body {
 }
 .projects__box {
   position: relative;
-  box-shadow: 0px 0px 15px var(--main);
+  border: 2px solid var(--main);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+.projects__img {
+  width: 100%;
+  height: auto;
 }
 .projects__img:hover ~ .projects__description {
   display: block;
 }
 .projects__description {
   background-color: #fff;
-  width: 300px;
+  width: 100%;
   padding: 1em;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 .projects__description--title {
   font-size: 2.2rem;
@@ -704,9 +723,103 @@ body {
   color: #fff;
 }
 
+.pricelist {
+  padding: 5em 0em;
+  position: relative;
+  background: #101010;
+}
+.pricelist__divider {
+  background-color: rgb(2, 9, 39);
+  width: 40%;
+  height: 55px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 30% 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 100%, 30% 100%);
+}
+.pricelist__title {
+  color: #fff;
+  font-size: 3.5rem;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.pricelist__title::before {
+  content: "";
+  position: absolute;
+  bottom: -15%;
+  left: 0;
+  height: 5px;
+  width: 5%;
+  background-color: var(--main);
+}
+.pricelist__card {
+  background-color: #6f42c1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 25px;
+}
+.pricelist__card--title {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0.5em 0em;
+}
+.pricelist__card--price {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+.pricelist__card--hr {
+  width: 50%;
+  height: 2px;
+  background-color: #fff;
+  margin: 1em 0em;
+}
+.pricelist__card--description {
+  color: #fff;
+  font-size: 1.3rem;
+}
+.pricelist__card--btn {
+  background: #5a34a5;
+  color: #000;
+  font-size: 1.6rem;
+  margin: 1em 0.5em;
+  border-radius: 25px;
+  padding: 0.5em 2em;
+}
+.pricelist__card--btn:hover {
+  background-color: #482c81;
+  color: #fff;
+}
+
 @media (min-width: 992px) {
   .showBackBtn {
     display: block;
+  }
+  .aboutus__divider {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 7% 100%);
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 7% 100%);
+  }
+  .whyus__divider {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+  }
+  .contact__divider {
+    width: 65%;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 7% 100%);
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 7% 100%);
+  }
+  .projects__divider {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 7% 100%);
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 7% 100%);
+  }
+  .pricelist__divider {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 7% 100%);
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 7% 100%);
   }
 }
 ::-webkit-scrollbar {
