@@ -1,7 +1,11 @@
 @use './reset' as *;
 
 :root {
-	--main: rgb(26, 154, 234);
+	--main: #8c00d0;
+}
+
+html {
+	scroll-padding-top: 10em;
 }
 
 body {
@@ -14,7 +18,7 @@ body {
 }
 
 //* BACK BTN *//
-.show {
+.showBackBtn {
 	display: none;
 }
 
@@ -42,6 +46,11 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	min-height: 100vh;
+	padding-top: 20em;
+
+	.darkBg {
+		background-color: rgba(0, 0, 0, 0.925);
+	}
 
 	.navbar {
 		&-brand {
@@ -132,9 +141,15 @@ body {
 			font-size: 2rem;
 			font-weight: 600;
 			letter-spacing: 2px;
+			border: 1px solid #8c00d0;
+			color: #8c00d0;
 
+			a {
+				color: #8c00d0;
+			}
 			&:hover {
 				color: #fff;
+				background-color: #8c00d0;
 
 				a {
 					color: #fff;
@@ -171,7 +186,7 @@ body {
 
 //* MAIN *//
 
-// -- ABOUT US -- //
+//* ABOUT US *//
 .aboutus {
 	padding: 5em 0em;
 	position: relative;
@@ -258,9 +273,13 @@ body {
 			font-size: 1.6rem;
 		}
 	}
+
+	&__icon {
+		filter: hue-rotate(40deg);
+	}
 }
 
-// -- WHY US -- //
+//* WHY US *//
 .whyus {
 	position: relative;
 	background-color: rgba(2, 9, 39, 1);
@@ -397,7 +416,7 @@ body {
 	}
 }
 
-// -- CONTACT -- //
+//* CONTACT *//
 .contact {
 	position: relative;
 	background-color: #303030a6;
@@ -537,11 +556,67 @@ body {
 
 	&__btn {
 		font-size: 1.75rem;
+		border: 1px solid var(--main);
+		color: var(--main);
+
+		&:hover {
+			background-color: var(--main);
+			border: 1px solid var(--main);
+		}
 	}
 }
 
 //* FOOTER *//
 .footer {
+	&__divider {
+		background-color: rgba(2, 9, 39, 1);
+		width: 50%;
+		height: 55px;
+		position: absolute;
+		top: 0;
+		right: -25%;
+		transform: skew(45deg);
+	}
+
+	&__title {
+		color: #fff;
+		font-size: 3.5rem;
+		position: relative;
+		text-transform: uppercase;
+		font-weight: 800;
+
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: -15%;
+			left: 0;
+			height: 5px;
+			width: 5%;
+			background-color: var(--main);
+		}
+	}
+
+	&__info {
+		color: #6c6c6c;
+		margin: 1em 0em;
+		letter-spacing: 1px;
+		font-size: 1.6rem;
+	}
+
+	&__description {
+		margin-top: 5rem;
+
+		&-title {
+			color: #fff;
+			font-size: 3.4rem;
+			font-weight: 800;
+		}
+
+		&-text {
+			font-size: 1.8rem;
+			color: #aaa;
+		}
+	}
 	padding: 5em 0em;
 	background-color: #101010;
 	border-top: 2px solid #4e4e4e;
@@ -560,7 +635,7 @@ body {
 		}
 
 		&--item {
-			font-size: 1.8rem;
+			font-size: 1.5rem;
 			color: #fff;
 			font-weight: lighter;
 
@@ -621,12 +696,102 @@ body {
 		&-btn {
 			margin: 0em 1em;
 			font-size: 1.5rem;
+			background-color: var(--main);
+			border: 1px solid var(--main);
+			&:hover {
+				border: 1px solid var(--main);
+				background-color: #510079;
+			}
+		}
+	}
+}
+
+//* PROJECTS *//
+.projects {
+	padding: 5em 0em;
+	position: relative;
+	background: #101010;
+
+	&__divider {
+		background-color: rgba(2, 9, 39, 1);
+		width: 50%;
+		height: 55px;
+		position: absolute;
+		top: 0;
+		right: -25%;
+		transform: skew(45deg);
+	}
+
+	&__title {
+		color: #fff;
+		font-size: 3.5rem;
+		position: relative;
+		text-transform: uppercase;
+		font-weight: 800;
+
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: -15%;
+			left: 0;
+			height: 5px;
+			width: 5%;
+			background-color: var(--main);
+		}
+	}
+
+	&__box {
+		position: relative;
+		box-shadow: 0px 0px 15px var(--main);
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+
+	&__img {
+		&:hover ~ .projects__description {
+			display: block;
+		}
+	}
+	&__description {
+		background-color: #fff;
+		width: 300px;
+		padding: 1em;
+		border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
+
+		&--title {
+			font-size: 2.2rem;
+			color: var(--main);
+			font-weight: 700;
+		}
+
+		&--info {
+			font-size: 1.4rem;
+		}
+
+		&--btn {
+			color: var(--main);
+			border: 1px solid var(--main);
+			font-weight: 800;
+
+			a {
+				color: var(--main);
+			}
+
+			&:hover {
+				background-color: var(--main);
+				border: 1px solid var(--main);
+
+				a {
+					color: #fff;
+				}
+			}
 		}
 	}
 }
 
 @media (min-width: 992px) {
-	.show {
+	.showBackBtn {
 		display: block;
 	}
 }
@@ -641,9 +806,9 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-	background: rgb(15, 34, 118);
+	background: #9a00e7;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: rgb(16, 25, 67);
+	background: #550f78;
 }

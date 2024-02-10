@@ -38,25 +38,27 @@
         <a href="#"><i class="fa-solid fa-angle-up"></i></a>
     </div>
     <header class="header">
-        <nav class="navbar navbar-expand-lg p-5">
+        <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
                 <a class="navbar-brand py-5" href="#">
                     <img src="./img/logo_bgremoved.png" alt="">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                <button class="navbar-toggler me-5" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav mx-auto">
-                        <a class="nav-link active py-2 px-4" aria-current="page" href="#">Główna</a>
-                        <a class="nav-link py-2 px-4" href="#aboutus">O nas</a>
-                        <a class="nav-link py-2 px-4" href="#">Projekty</a>
+                        <a class="nav-link active py-2 px-4" aria-current="page" href="index.html">Główna</a>
+                        <a class="nav-link py-2 px-4" href="index.html#aboutus">O nas</a>
+                        <a class="nav-link py-2 px-4" href="./projects.html">Projekty</a>
                         <a class="nav-link py-2 px-4" href="#">Sklep</a>
-                        <a class="nav-link py-2 px-4" href="#contact">Kontakt</a>
+                        <a class="nav-link py-2 px-4" href="index.html#contact">Kontakt</a>
                     </div>
-                    <a href="#contact" class="nav-link nav-link--shop mt-5 mt-md-0 py-2 px-4">Zamów stronę</a>
+                    <a href="index.html#contact"
+                        class="nav-link nav-link--shop mt-5 mt-md-0 py-2 px-4 text-light mb-5 mb-lg-0">Zamów
+                        stronę</a>
                 </div>
             </div>
         </nav>
@@ -72,7 +74,7 @@
                         <div class="header__btn d-flex flex-column py-3 mt-5">
                             <div data-aos="fade-up" data-aos-delay="200"
                                 class="btn btn-lg btn-outline-primary py-3 pe-5 my-2">
-                                <i class="fa-brands fa-discord me-5"></i> Nasz discord
+                                <a href="#aboutus"><i class="fa-brands fa-discord me-5"></i> Nasz discord</a>
                             </div>
                             <div data-aos="fade-up" data-aos-delay="400"
                                 class="btn btn-lg btn-outline-primary py-3 pe-5 my-2">
@@ -120,7 +122,7 @@
                         <div class="row gy-4">
                             <div class="col-6 col-lg-3">
                                 <div <div data-aos="fade-up" data-aos-delay="100" class="aboutus__feature-box">
-                                    <img src="./img/icon-1.png">
+                                    <img class="aboutus__icon" src="./img/icon-1.png">
                                     <h2 class="aboutus__feature-title">Rzetelność</h2>
                                     <p class="aboutus__feature-description">Do każdego projektu podchodzimy rzetelnie i
                                         dokładnie</p>
@@ -128,7 +130,7 @@
                             </div>
                             <div class="col-6 col-lg-3">
                                 <div <div data-aos="fade-up" data-aos-delay="300" class="aboutus__feature-box">
-                                    <img src="./img/icon-2.png">
+                                    <img class="aboutus__icon" src="./img/icon-2.png">
                                     <h2 class="aboutus__feature-title">Profesjonalizm</h2>
                                     <p class="aboutus__feature-description">Każda strona jest tworzona przez
                                         profesjonalistów</p>
@@ -136,7 +138,7 @@
                             </div>
                             <div class="col-6 col-lg-3">
                                 <div <div data-aos="fade-up" data-aos-delay="600" class="aboutus__feature-box">
-                                    <img src="./img/icon-3.png">
+                                    <img class="aboutus__icon" src="./img/icon-3.png">
                                     <h2 class="aboutus__feature-title">Dobra cena</h2>
                                     <p class="aboutus__feature-description">Nie bierzemy ogromych sum, tworzymy strony
                                         również dla graczy, którzy chcą się wypromować</p>
@@ -144,7 +146,7 @@
                             </div>
                             <div class="col-6 col-lg-3">
                                 <div <div data-aos="fade-up" data-aos-delay="900" class="aboutus__feature-box">
-                                    <img src="./img/icon-4.png">
+                                    <img class="aboutus__icon" src="./img/icon-4.png">
                                     <h2 class="aboutus__feature-title">24/7 Pomoc</h2>
                                     <p class="aboutus__feature-description">Jesteśmy dostępni całą dobę!</p>
                                 </div>
