@@ -39,6 +39,78 @@ body {
 	}
 }
 
+//* NAVBAR *//
+.darkBg {
+	background-color: rgba(0, 0, 0, 0.925);
+}
+
+.navbar {
+	&-brand {
+		img {
+			width: 250px;
+		}
+	}
+
+	&-toggler {
+		background-color: var(--main);
+		padding: 0.5em 1em;
+	}
+
+	.nav-link,
+	.nav-link.active {
+		color: #fff;
+		font-size: 1.8rem;
+		position: relative;
+
+		&:not(.nav-link--shop)::before {
+			position: absolute;
+			content: '';
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			background-color: #fff;
+			transform: scaleX(0);
+			transform-origin: right;
+			transition: transform 0.3s;
+		}
+
+		&:hover:not(.nav-link--shop)::before {
+			transform: scaleX(1);
+			transform-origin: left;
+		}
+		&--shop {
+			background-color: var(--main);
+			color: #000;
+			border-radius: 25px;
+			border: 2px solid transparent;
+
+			&:hover {
+				background-color: transparent;
+				color: var(--main);
+				border: 2px solid var(--main);
+			}
+		}
+
+		&--active {
+			color: #fff;
+			font-size: 1.8rem;
+			position: relative;
+		}
+
+		&--active::before {
+			position: absolute;
+			content: '';
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			background-color: #fff;
+			transform: scaleX(0.9);
+		}
+	}
+}
+
 //* HEADER *//
 
 .header {
@@ -47,10 +119,6 @@ body {
 	background-repeat: no-repeat;
 	min-height: 100vh;
 	padding-top: 20em;
-
-	.darkBg {
-		background-color: rgba(0, 0, 0, 0.925);
-	}
 
 	.navbar {
 		&-brand {
@@ -433,6 +501,61 @@ body {
 	}
 }
 
+//* PARTNERS*//
+.partners {
+	padding: 6em 0em;
+	position: relative;
+	background: #101010;
+
+	&__divider {
+		background-color: rgba(2, 9, 39, 1);
+		width: 40%;
+		height: 55px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		clip-path: polygon(0 0, 100% 0%, 100% 100%, 30% 100%);
+	}
+
+	&__title {
+		color: #fff;
+		font-size: 3.5rem;
+		position: relative;
+		text-transform: uppercase;
+		font-weight: 800;
+
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: -15%;
+			left: 0;
+			height: 5px;
+			width: 5%;
+			background-color: var(--main);
+		}
+	}
+
+	&__info {
+		color: #6c6c6c;
+		margin: 1em 0em;
+		letter-spacing: 1px;
+		font-size: 1.6rem;
+	}
+
+	&__swiper {
+		background-color: #606060;
+		padding: 1em;
+		border-radius: 25px;
+	}
+
+	&__slide {
+		padding: 1em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
 //* CONTACT *//
 .contact {
 	position: relative;
@@ -440,7 +563,7 @@ body {
 	padding: 5em 0em;
 
 	&__divider {
-		background-color: rgba(2, 9, 39, 1);
+		background-color: #101010;
 		width: 40%;
 		height: 55px;
 		position: absolute;
@@ -718,7 +841,7 @@ body {
 
 //* PROJECTS *//
 .projects {
-	padding: 5em 0em;
+	padding: 17em 0em;
 	position: relative;
 	background: #101010;
 
@@ -803,6 +926,72 @@ body {
 	}
 }
 
+//* PROJECT *//
+.project {
+	padding: 17em 0em;
+	position: relative;
+	background: #101010;
+
+	&__divider {
+		background-color: rgba(2, 9, 39, 1);
+		width: 40%;
+		height: 55px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		clip-path: polygon(0 0, 100% 0%, 100% 100%, 30% 100%);
+	}
+
+	&__title {
+		color: #fff;
+		font-size: 3.5rem;
+		position: relative;
+		text-transform: uppercase;
+		font-weight: 800;
+
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: -15%;
+			left: 0;
+			height: 5px;
+			width: 5%;
+			background-color: var(--main);
+		}
+	}
+
+	&__text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		&--title {
+			color: #fff;
+			font-size: 4rem;
+			text-transform: uppercase;
+			font-weight: 800;
+			letter-spacing: 15px;
+			margin: 1em 0em 1.5em 0em;
+			text-align: center;
+		}
+
+		&--description {
+			font-size: 1.6rem;
+			color: #bfbfbf;
+			letter-spacing: 0.5px;
+		}
+	}
+
+	&__img {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img {
+			border: 3px solid var(--main);
+			border-radius: 15px;
+		}
+	}
+}
 //* PRICELIST *//
 .pricelist {
 	padding: 5em 0em;
@@ -902,6 +1091,12 @@ body {
 		}
 	}
 
+	.partners {
+		&__divider {
+			clip-path: polygon(0 0, 100% 0%, 100% 100%, 7% 100%);
+		}
+	}
+
 	.contact {
 		&__divider {
 			width: 65%;
@@ -911,6 +1106,22 @@ body {
 	.projects {
 		&__divider {
 			clip-path: polygon(0 0, 100% 0%, 100% 100%, 7% 100%);
+		}
+	}
+
+	.project {
+		&__divider {
+			clip-path: polygon(0 0, 100% 0%, 100% 100%, 7% 100%);
+		}
+
+		&__text {
+			&--title {
+				margin: 0em 0em 1em 0em;
+			}
+		}
+
+		&__text {
+			padding: 0em 5em;
 		}
 	}
 

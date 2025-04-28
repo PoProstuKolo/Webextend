@@ -1,7 +1,7 @@
 const foooterSpan = document.querySelector('.footer__location--date')
 const body = document.querySelector('body')
 const backBtn = document.querySelector('.backBtn')
-const nav = document.querySelector('.navbar')
+const nav = document.querySelector('nav')
 // YEAR IN FOOTER
 let year = new Date().getFullYear()
 foooterSpan.textContent = year
@@ -23,7 +23,7 @@ AOS.init({
 
 //ADD SHADOW TO NAV
 const addBg = () => {
-	if (window.scrollY >= 165) {
+	if (window.scrollY >= 100) {
 		nav.classList.add('darkBg')
 	} else {
 		nav.classList.remove('darkBg')
